@@ -271,7 +271,7 @@ class MLP():
             self.lr_adjust(i)
             loss_list.append(loss)
 
-            if i % 50 == 1:
+            if i % 10 == 1:
                 y_pred_class = self.predict(test_X)
                 test_acc = accuracy(fromOneHot(test_y), y_pred_class)
                 print("epoch = ", i-1)
